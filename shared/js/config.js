@@ -1,4 +1,8 @@
-const API_BASE_URL = "http://127.0.0.1:8000/api/";
+const API_BASE_URL =
+  window.location.hostname === "localhost" ||
+  window.location.hostname === "127.0.0.1"
+    ? "http://127.0.0.1:8000/api/"
+    : "https://api.quizly.ogulcan-erdag.com/api/";
 
 const LOGIN_URL = "login/";
 const REGISTER_URL = "register/";
